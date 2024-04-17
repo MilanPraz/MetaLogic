@@ -18,19 +18,23 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+This document describes the development process for cloning the career page of the Metalogic website using Next.js with TypeScript. The project aims to create a replica of the career page with similar functionality and design aesthetics.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<!-- - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial. -->
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Development Process Documentation: Career Page Cloning
 
-## Deploy on Vercel
+### Introduction
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This document describes the development process for cloning the career page of the Metalogic website using Next.js with TypeScript. The project aims to create a replica of the career page with similar functionality and design aesthetics.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Setup Instructions
+
+Prerequisites
+
+- Node.js and npm/yarn installed
+- Basic understanding of Next.js and React
+- Familiarity with TypeScript, Tailwind CSS, and Sass
