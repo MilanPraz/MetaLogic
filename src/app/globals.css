@@ -1,33 +1,204 @@
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
+
+.rocket-container {
+  background: linear-gradient(180deg, #b4b2b2 0, #b4b2b2 70%, #f5f5f5);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.rocket-body {
+  position: relative;
+  width: 55px;
+  height: 130px;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  overflow: visible;
+}
+
+.rocket {
+  animation: lifter 4s forwards;
+  animation-delay: 0s;
+}
+@keyframes lifter {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(10px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(10px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-1000px);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.rocket-body::after {
+  z-index: 10;
+  bottom: 40px;
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 130px;
+  background-color: white;
+  border-top-right-radius: 60%;
+  border-top-left-radius: 60%;
+  border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+  left: 50%;
+  top: 0%;
+  transform: translateX(-50%);
+}
+.rocket-body::before {
+  z-index: 12;
+  bottom: 40px;
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 130px;
+  background-color: #dadada;
+  border-top-right-radius: 60%;
+  border-top-left-radius: 60%;
+  border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+  left: 50%;
+  top: 1%;
+  transform: translateX(-50%);
+}
+.rocket-window {
+  position: relative;
+  /* content: ""; */
+  /* position: absolute; */
+  /* z-index: 102; */
+}
+.rocket-window::before {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  top: 29px;
+  left: 40%;
+  transform: translateX(-50%);
+
+  border: 3px solid #b4b2b2;
+  background-color: #f15d2d;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.rocket-left-fin {
+  position: absolute;
+  z-index: 10;
+  height: 50px;
+  width: 50px;
+  background-color: #f15d2d;
+  left: -50%;
+  top: 80px;
+  border-top-left-radius: 80%;
+  border-bottom-left-radius: 20%;
+}
+.rocket-right-fin {
+  position: absolute;
+  z-index: 10;
+  height: 50px;
+  width: 50px;
+  background-color: #f15d2d;
+  right: -50%;
+
+  top: 80px;
+  border-top-right-radius: 80%;
+  border-bottom-right-radius: 20%;
+}
+
+.rocket-tail {
+  position: absolute;
+  height: 10px;
+  width: 38px;
+  z-index: 100;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: #5c4f49;
+  top: 130px;
+  left: 14%;
+}
+
+.rocket-flame {
+  position: absolute;
+  height: 80px;
+  width: 25px;
+  z-index: 100;
+  left: 25%;
+  top: 130px;
+  background-color: rgb(225, 219, 219);
+  opacity: 0.5;
+}
+
+.rocket-text {
+  position: absolute;
+
+  z-index: 100;
+  top: 80px;
+  left: 40%;
+
+  transform: rotate(90deg);
+}
+/* 
+@keyframes pulse {
+  0% {
+    background-color: transparent;
+    height: 80px;
+    width: 80px;
+    transform-origin: center;
   }
+  50% {
+    height: 150px;
+    width: 150px;
+    transform-origin: center;
+    background-color: white;
+  }
+
+  100% {
+    height: 170px;
+    width: 170px;
+
+    background-color: transparent;
+    transform-origin: center;
+  }
+} */
+
+.hoverUnderline {
+  position: relative;
+  display: inline-block;
+}
+
+.hoverUnderline::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  width: 0;
+  height: 2.5px;
+  background-color: #e53b3a;
+  transition: all 0.3s ease-in;
+}
+.hoverUnderline:hover::before {
+  width: 28px;
 }

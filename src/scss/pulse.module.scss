@@ -1,0 +1,24 @@
+@mixin pulseAnimate($duration, $delay: 1s, $scale: 1.9, $cleft: 40, $ctop: 50) {
+  transform-origin: center;
+  animation-name: pulse;
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-iteration-count: infinite;
+  @keyframes pulse {
+    0% {
+      background-color: transparent;
+      transform: scale(1);
+      transform-origin: center;
+    }
+    50% {
+      transform: scale(1.5);
+      transform-origin: center;
+      background-color: white;
+    }
+    100% {
+      background-color: transparent;
+      transform-origin: center;
+      transform: scale(1.9);
+    }
+  }
+}
