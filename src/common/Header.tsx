@@ -53,9 +53,6 @@ export default function Header() {
     };
   }, [lastScrollY]);
 
-  console.log(lastScrollY);
-  console.log(isHeaderVisible);
-
   const handleToggle = () => {
     console.log("click");
     setToggle((toggle) => !toggle);
@@ -64,9 +61,11 @@ export default function Header() {
   return (
     <nav className={` w-full`}>
       {/* <div className=" text-sm font-semibold     bg-red-400 bg-opacity-50 "> */}
-      {/* ${isHeaderVisible ? " translate-y-0" : "   -translate-y-32"} */}
+
       <div
-        className={`   transition-all duration-300 ease-linear   flex  items-center  py-3 p-2  px-6   backdrop-blur-md overflow-hidden  bg-header-bg bg-opacity-15 w-full justify-between  fixed top-0 left-0 z-[9999999]`}
+        className={`   transition-all duration-300 ease-linear    ${
+          isHeaderVisible ? " translate-y-0" : "   -translate-y-32"
+        }   flex  items-center  py-3 p-2  px-6   backdrop-blur-md overflow-hidden  bg-header-bg bg-opacity-15 w-full justify-between  fixed top-0 left-0 z-[9999999]`}
       >
         <div className=" flex  items-center gap-4 ">
           <Image src="/logo.png" width={50} height={50} alt="logo" />
