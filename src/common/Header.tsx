@@ -116,7 +116,7 @@ export default function Header() {
         </div>
       </div>
       <div
-        className={` transition-all overflow-hidden duration-500 ease-in-out fixed  z-[999999] h-screen w-screen bg-white md:hidden pt-52 -translate-x-[100%]   ${
+        className={` transition-all overflow-hidden duration-500 ease-in-out fixed  z-[9999999999] h-screen w-screen bg-white md:hidden pt-52 -translate-x-[100%]   ${
           toggle && "translate-x-0  bg-opacity-100 "
         }   `}
       >
